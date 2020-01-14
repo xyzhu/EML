@@ -1,0 +1,267 @@
+\documentclass[review,3p]{elsarticle}
+
+\usepackage{lineno,hyperref}
+\modulolinenumbers[5]
+\usepackage{graphicx}
+\usepackage{floatrow}
+\floatsetup[table]{capposition=top}
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+\usepackage{subfigure}
+\graphicspath{{Figures/}}
+\usepackage[T1]{fontenc} % optional
+\usepackage{amsmath}
+\usepackage{epstopdf}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+%\usepackage{multicol}
+\usepackage{diagbox}[2011/11/22]
+\usepackage{enumerate}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}% ·ÅÔÚµ¼ÑÔÇø
+%\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
+\usepackage{multirow}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\usepackage{comment}
+\usepackage{threeparttable}
+\usepackage{mathrsfs,amsfonts,amssymb}
+\useunder{\uline}{\ul}{}
+\usepackage{geometry}
+\usepackage{rotating}
+\floatname{algorithm}{Procedure}
+\geometry{top=2.5cm,bottom=3cm}
+\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
+
+\usepackage{supertabular}
+\usepackage{array}
+\usepackage{booktabs} %调整表格线与上下内容的间隔
+\usepackage{amsmath} 
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{url}
+
+\journal{Journal of \LaTeX\ Templates}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\begin{frontmatter}
+%
+%\title{Elsevier \LaTeX\ template\tnoteref{mytitlenote}}
+%\tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
+%
+%%% Group authors per affiliation:
+%\author{Elsevier\fnref{myfootnote}}
+%\address{Radarweg 29, Amsterdam}
+%\fntext[myfootnote]{Since 1880.}
+%
+%%% or include affiliations in footnotes:
+%\author[mymainaddress,mysecondaryaddress]{Elsevier Inc}
+%\ead[url]{www.elsevier.com}
+%
+%\author[mysecondaryaddress]{Global Customer Service\corref{mycorrespondingauthor}}
+%\cortext[mycorrespondingauthor]{Corresponding author}
+%\ead{support@elsevier.com}
+%
+%\address[mymainaddress]{1600 John F Kennedy Boulevard, Philadelphia}
+%\address[mysecondaryaddress]{360 Park Avenue South, New York}
+%
+%\begin{abstract}
+%This template helps you to create a properly formatted \LaTeX\ manuscript.
+%\end{abstract}
+%
+%\begin{keyword}
+%\texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
+%\MSC[2010] 00-01\sep  99-00
+%\end{keyword}
+%
+%\end{frontmatter}
+%
+%\linenumbers
+%
+%\section{The Elsevier article class}
+%
+%\paragraph{Installation} If the document class \emph{elsarticle} is not available on your computer, you can download and install the system package \emph{texlive-publishers} (Linux) or install the \LaTeX\ package \emph{elsarticle} using the package manager of your \TeX\ installation, which is typically \TeX\ Live or Mik\TeX.
+%
+%\paragraph{Usage} Once the package is properly installed, you can use the document class \emph{elsarticle} to create a manuscript. Please make sure that your manuscript follows the guidelines in the Guide for Authors of the relevant journal. It is not necessary to typeset your manuscript in exactly the same way as an article, unless you are submitting to a camera-ready copy (CRC) journal.
+%
+%\paragraph{Functionality} The Elsevier article class is based on the standard article class and supports almost all of the functionality of that class. In addition, it features commands and options to format the
+%\begin{itemize}
+%\item document style
+%\item baselineskip
+%\item front matter
+%\item keywords and MSC codes
+%\item theorems, definitions and proofs
+%\item lables of enumerations
+%\item citation style and labeling.
+%\end{itemize}
+%
+%\section{Front matter}
+%
+%The author names and affiliations could be formatted in two ways:
+%\begin{enumerate}[(1)]
+%\item Group the authors per affiliation.
+%\item Use footnotes to indicate the affiliations.
+%\end{enumerate}
+%See the front matter of this document for examples. You are recommended to conform your choice to the journal you are submitting to.
+%
+%\section{Bibliography styles}
+%
+%There are various bibliography styles available. You can select the style of your choice in the preamble of this document. These styles are Elsevier styles based on standard styles like Harvard and Vancouver. Please use Bib\TeX\ to generate your bibliography and include DOIs whenever available.
+%
+%Here are two sample references: \cite{Feynman1963118,Dirac1953888}.
+%
+%\section*{References}
+%
+%\bibliography{mybibfile}
+		\scriptsize	
+		\begin{longtable}{p{0.1cm}lp{0.8cm}<{\centering}p{0.8cm}<{\centering}p{0.9cm}<{\centering}|p{0.1cm}lp{0.8cm}<{\centering}p{0.8cm}<{\centering}p{0.9cm}<{\centering}}
+			
+			\caption{Description of the Benchmark Data sets}
+			\label{table: Benchmark Data}  \\ % add \\ command to tell LaTeX to start a new line
+			
+			% Appear table header at the first page as well
+			\hline
+			ID	&	Name	&	\#Feature	&	\#Instance	&	\#Class	&	ID	&	Name	&	\#Feature	&	\#Instance	&	\#Class	\\ \hline
+			\endfirsthead
+			
+			% Appear the table header at the top of every page
+			\hline
+			ID	&	Name	&	\#Feature	&	\#Instance	&	\#Class	&	ID	&	Name	&	\#Feature	&	\#Instance	&	\#Class	\\ \hline
+			\endhead 
+			
+			% Appear \hline at the bottom of every page
+			\hline
+			\endfoot 
+			
+			% data begins here
+			\hline																			
+			
+			1	&	abalone	&	8	&	4177	&	29	&	93	&	landsat\_train	&	36	&	4435	&	6	\\
+			2	&	adellll	&	21	&	1075	&	4	&	94	&	led7digit	&	7	&	500	&	10	\\
+			3	&	advertisement	&	1558	&	3279	&	2	&	95	&	letter	&	16	&	20000	&	26	\\
+			4	&	analcatdata\_assessment	&	15	&	13	&	4	&	96	&	liver\_disorders	&	6	&	345	&	2	\\
+			5	&	analcatdata\_authorship	&	70	&	841	&	4	&	97	&	lung\_cancer	&	56	&	32	&	3	\\
+			6	&	analcatdata\_bankruptcy	&	6	&	50	&	2	&	98	&	lymph	&	18	&	148	&	4	\\
+			7	&	analcatdata\_birthday	&	3	&	365	&	7	&	99	&	magic04	&	10	&	19020	&	2	\\
+			8	&	analcatdata\_bondrate	&	11	&	57	&	5	&	100	&	mammographic\_masses	&	5	&	961	&	2	\\
+			9	&	analcatdata\_boxing1	&	3	&	120	&	2	&	101	&	marketing	&	13	&	6876	&	9	\\
+			10	&	analcatdata\_boxing2	&	3	&	132	&	2	&	102	&	messidor\_features	&	19	&	1151	&	2	\\
+			11	&	analcatdata\_braziltourism	&	8	&	412	&	7	&	103	&	mfeat\_factors	&	216	&	2000	&	10	\\
+			12	&	analcatdata\_broadway	&	9	&	95	&	5	&	104	&	mfeat\_fourier	&	76	&	2000	&	10	\\
+			13	&	analcatdata\_broadwaymult	&	7	&	285	&	7	&	105	&	mfeat\_karhunen	&	64	&	2000	&	10	\\
+			14	&	analcatdata\_chall101	&	2	&	138	&	2	&	106	&	mfeat\_morphological	&	6	&	2000	&	10	\\
+			15	&	analcatdata\_creditscore	&	6	&	100	&	2	&	107	&	mfeat\_pixel	&	240	&	2000	&	10	\\
+			16	&	analcatdata\_currency	&	3	&	31	&	7	&	108	&	mfeat\_zernike	&	47	&	2000	&	10	\\
+			17	&	analcatdata\_cyyoung8092	&	10	&	97	&	2	&	109	&	molecular\_biology\_promoters	&	58	&	106	&	2	\\
+			18	&	analcatdata\_cyyoung9302	&	10	&	92	&	2	&	110	&	monks\_problems\_1\_test	&	6	&	122	&	2	\\
+			19	&	analcatdata\_dmft	&	4	&	797	&	6	&	111	&	monks\_problems\_1\_train	&	6	&	124	&	2	\\
+			20	&	analcatdata\_draft	&	5	&	365	&	12	&	112	&	monks\_problems\_2\_test	&	6	&	432	&	2	\\
+			21	&	analcatdata\_esr	&	2	&	32	&	2	&	113	&	monks\_problems\_2\_train	&	6	&	169	&	2	\\
+			22	&	analcatdata\_halloffame	&	17	&	1340	&	3	&	114	&	monks\_problems\_3\_test	&	6	&	432	&	2	\\
+			23	&	analcatdata\_homerun	&	27	&	162	&	2	&	115	&	monks\_problems\_3\_train	&	6	&	122	&	2	\\
+			24	&	analcatdata\_lawsuit	&	4	&	264	&	2	&	116	&	movement\_libras	&	90	&	360	&	15	\\
+			25	&	analcatdata\_mapleleafs	&	1	&	84	&	3	&	117	&	mushroom	&	22	&	8124	&	2	\\
+			26	&	analcatdata\_marketing	&	32	&	343	&	5	&	118	&	newthyroid	&	5	&	215	&	3	\\
+			27	&	analcatdata\_reviewer	&	8	&	329	&	3	&	119	&	nomao	&	118	&	10339	&	2	\\
+			28	&	analcatdata\_votesurvey	&	4	&	48	&	4	&	120	&	nursery	&	8	&	12960	&	5	\\
+			29	&	anneal.ORIG	&	38	&	898	&	6	&	121	&	onehr	&	72	&	2536	&	2	\\
+			30	&	anneal	&	38	&	798	&	5	&	122	&	optdigits	&	64	&	3823	&	10	\\
+			31	&	arrhythmia	&	279	&	452	&	16	&	123	&	page\_blocks	&	10	&	5473	&	5	\\
+			32	&	audiology	&	69	&	226	&	24	&	124	&	parkinson Speech	&	26	&	1040	&	2	\\
+			33	&	australian	&	14	&	690	&	2	&	125	&	pendigits	&	16	&	10992	&	10	\\
+			34	&	autism\_Adolescent\_Data	&	20	&	104	&	2	&	126	&	phishing	&	30	&	11055	&	2	\\
+			35	&	autism\_Adult\_Data	&	20	&	704	&	2	&	127	&	phoneme	&	5	&	5404	&	2	\\
+			36	&	autism\_Child\_Data	&	20	&	292	&	2	&	128	&	PimaIndDia	&	8	&	768	&	2	\\
+			37	&	autos	&	25	&	205	&	7	&	129	&	post\_oper	&	8	&	90	&	3	\\
+			38	&	bach\_chorals\_harmony	&	16	&	5665	&	102	&	130	&	primary\_tumor	&	17	&	339	&	22	\\
+			39	&	backache	&	32	&	180	&	2	&	131	&	qualBank	&	6	&	250	&	2	\\
+			40	&	balance\_scale	&	4	&	625	&	3	&	132	&	ring	&	20	&	7400	&	2	\\
+			41	&	banana	&	2	&	5300	&	2	&	133	&	saheart	&	9	&	462	&	2	\\
+			42	&	bands	&	19	&	365	&	2	&	134	&	satimage	&	36	&	6435	&	7	\\
+			43	&	bank\_full	&	16	&	13563	&	2	&	135	&	seeds	&	7	&	210	&	3	\\
+			44	&	blood\_transfusion	&	4	&	748	&	2	&	136	&	segment	&	19	&	2310	&	7	\\
+			45	&	breast\_cancer	&	9	&	286	&	2	&	137	&	seismic\_bumps	&	18	&	2584	&	2	\\
+			46	&	breast\_w	&	9	&	699	&	2	&	138	&	semeion	&	256	&	1593	&	10	\\
+			47	&	bridges\_version1	&	11	&	105	&	6	&	139	&	shuttle	&	9	&	13050	&	7	\\
+			48	&	bridges\_version2	&	11	&	105	&	6	&	140	&	sick	&	29	&	3772	&	2	\\
+			49	&	bupa	&	6	&	345	&	2	&	141	&	skin	&	3	&	19604	&	2	\\
+			50	&	car	&	6	&	1728	&	4	&	142	&	solar\_flare\_1	&	12	&	323	&	6	\\
+			51	&	census\_income	&	14	&	16280	&	2	&	143	&	solar\_flare\_2	&	12	&	1066	&	6	\\
+			52	&	chess	&	6	&	11222	&	18	&	144	&	sonar	&	60	&	208	&	2	\\
+			53	&	chronic\_kidney\_disease\_full	&	24	&	400	&	2	&	145	&	soybean	&	35	&	683	&	19	\\
+			54	&	clean1	&	168	&	476	&	2	&	146	&	spambase	&	57	&	4601	&	2	\\
+			55	&	cmc	&	9	&	1473	&	3	&	147	&	spectf\_test	&	44	&	269	&	2	\\
+			56	&	colic	&	22	&	368	&	2	&	148	&	spectf\_train	&	44	&	80	&	2	\\
+			57	&	colic\_ORIG	&	27	&	368	&	2	&	149	&	spect\_test	&	22	&	187	&	2	\\
+			58	&	connect\_4	&	42	&	13511	&	3	&	150	&	spect\_train	&	22	&	80	&	2	\\
+			59	&	contraceptive	&	9	&	1473	&	3	&	151	&	splice	&	61	&	3190	&	3	\\
+			60	&	credit\_a	&	15	&	690	&	2	&	152	&	sponge	&	45	&	76	&	3	\\
+			61	&	credit\_g	&	24	&	1000	&	2	&	153	&	student\_mat	&	30	&	395	&	21	\\
+			62	&	crx	&	15	&	653	&	2	&	154	&	student\_por	&	30	&	649	&	21	\\
+			63	&	cylinder\_bands	&	39	&	540	&	2	&	155	&	synthetic\_control	&	60	&	600	&	6	\\
+			64	&	dermatology	&	34	&	366	&	6	&	156	&	tae	&	5	&	151	&	3	\\
+			65	&	diabetes	&	8	&	768	&	2	&	157	&	texture	&	40	&	5500	&	11	\\
+			66	&	dr	&	19	&	1151	&	2	&	158	&	thoraricSurgery	&	16	&	470	&	2	\\
+			67	&	echocardiogram	&	11	&	75	&	3	&	159	&	thyroid	&	21	&	7200	&	3	\\
+			68	&	ecoli	&	7	&	336	&	8	&	160	&	tic\_tac\_toe	&	9	&	958	&	2	\\
+			69	&	eegEyeState	&	14	&	14980	&	2	&	161	&	titanic	&	3	&	2201	&	2	\\
+			70	&	flag	&	28	&	194	&	8	&	162	&	trains	&	32	&	10	&	2	\\
+			71	&	flare	&	11	&	1066	&	6	&	163	&	twonorm	&	20	&	7400	&	2	\\
+			72	&	forestType	&	27	&	198	&	4	&	164	&	urbanland\_test	&	147	&	507	&	9	\\
+			73	&	german	&	20	&	1000	&	2	&	165	&	urbanland\_train	&	147	&	168	&	9	\\
+			74	&	glass	&	9	&	214	&	7	&	166	&	vehicle	&	18	&	846	&	4	\\
+			75	&	haberman	&	3	&	306	&	2	&	167	&	vertebral\_2c	&	6	&	310	&	2	\\
+			76	&	hayes\_roth\_test	&	4	&	28	&	4	&	168	&	vertebral	&	6	&	310	&	3	\\
+			77	&	hayes\_roth\_train	&	4	&	132	&	4	&	169	&	vote	&	16	&	435	&	2	\\
+			78	&	heart\_c	&	13	&	303	&	5	&	170	&	vowel	&	13	&	990	&	11	\\
+			79	&	heart\_h	&	13	&	294	&	5	&	171	&	wall\_follow24	&	24	&	5456	&	4	\\
+			80	&	heart\_statlog	&	13	&	270	&	2	&	172	&	wall\_follow4	&	4	&	5456	&	4	\\
+			81	&	hepatitis	&	19	&	155	&	2	&	173	&	waveform\_5000	&	40	&	5000	&	3	\\
+			82	&	housevotes	&	16	&	232	&	2	&	174	&	wdbc	&	30	&	569	&	2	\\
+			83	&	hypothyroid	&	29	&	3772	&	4	&	175	&	wholesale	&	7	&	440	&	2	\\
+			84	&	ilpd	&	10	&	583	&	2	&	176	&	wilt\_test	&	5	&	500	&	2	\\
+			85	&	ionosphere	&	34	&	351	&	2	&	177	&	wilt\_train	&	5	&	4339	&	2	\\
+			86	&	iris	&	4	&	150	&	3	&	178	&	wine	&	13	&	178	&	3	\\
+			87	&	kdd\_JapaneseVowels\_test	&	14	&	5687	&	9	&	179	&	winequality\_red	&	11	&	1599	&	10	\\
+			88	&	kdd\_JapaneseVowels\_train	&	14	&	4274	&	9	&	180	&	winequality\_white	&	11	&	4898	&	10	\\
+			89	&	kdd\_synthetic\_control	&	61	&	600	&	6	&	181	&	wisconsin	&	9	&	683	&	2	\\
+			90	&	kr\_vs\_kp	&	36	&	3196	&	2	&	182	&	yeast	&	8	&	1484	&	13	\\
+			91	&	labor	&	16	&	57	&	2	&	183	&	zoo	&	16	&	101	&	7	\\
+			92	&	landsat\_test	&	36	&	2000	&	6	&		&		&		&		&		\\ \hline
+		\end{longtable}		
+
+\end{document}

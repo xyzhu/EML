@@ -1,0 +1,36 @@
+\begin{wrapfigure}[5]{l}[40pt]{4cm}
+ \includegraphics[scale=0.5]{xiaoyan}
+ \end{wrapfigure}
+
+\vspace {\AuthorbibTopSkip }
+ \noindent\relax \textbf {Xiaoyan Zhu}\par
+ \noindent\relax received her PhD degree in computer science and technology from Xi'an Jiaotong University, China, in 2013. Currently, she is working as an associate professor in the School of Computer Science and Technology, Xi'an Jiaotong University. Her current research interests include data mining and machine learning.
+\vspace {\AuthorbibBottomSkip }
+
+\begin{wrapfigure}[5]{l}[40pt]{4cm}
+ \includegraphics[scale=2.3]{chenzhen}
+ \end{wrapfigure}
+
+\vspace {\AuthorbibTopSkip }
+ \noindent\relax \textbf {Chenzhen Ying}\par
+ \noindent\relax received his Bachelor degree in computer science and technology from Xi'an Jiaotong University, China, in 2018. Now, he is a candidate master student in the Department of Computer Science and Technology, Xi'an Jiaotong University. His current research interest is on data mining and machine learning.
+\vspace {\AuthorbibBottomSkip }
+
+\begin{wrapfigure}[5]{l}[40pt]{4cm}
+ \includegraphics[scale=0.4]{jiayin}
+ \end{wrapfigure}
+
+\vspace {\AuthorbibTopSkip }
+ \noindent\relax \textbf {Jiayin Wang}\par
+ \noindent\relax received her PhD degree in computer science and engineering from University of Connecticut, USA, in 2013. Currently, he is working as a professor in the School of Computer Science and Technology, Xi'an Jiaotong University. His current research interests include bioinformatics computing and machine learning.
+\vspace {\AuthorbibBottomSkip }
+
+\begin{wrapfigure}[5]{l}[40pt]{4cm}
+ \includegraphics[scale=0.6]{guangtao}
+ \end{wrapfigure}
+
+\vspace {\AuthorbibTopSkip }
+ \noindent\relax \textbf {Guangtao Wang}\par
+ \noindent\relax received his PhD degree in computer science and technology from Xi'an Jiaotong University, China, in 2013. He currently is a research fellow in JD AI Research, Mountain View, CA, USA. His research interests include data mining and machine learning.
+\vspace {\AuthorbibBottomSkip }
+
